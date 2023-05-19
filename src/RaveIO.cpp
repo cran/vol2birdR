@@ -93,6 +93,7 @@ private:
   vol2bird_t _alldata;
   void initialize_config(vol2bird_t *alldata) {
     strcpy(alldata->misc.filename_pvol, "");
+    strcpy(alldata->misc.filename_vp, "");
     alldata->options.elevMin = 0.0;
     alldata->options.elevMax = 90.0;
     strcpy(alldata->options.dbzType, "DBZH");
@@ -138,6 +139,7 @@ private:
     alldata->options.resampleNbins = 100;
     alldata->options.resampleNrays = 360;
     alldata->options.mistNetNElevs = 5;
+    memset(alldata->options.mistNetElevs, 0, sizeof(float)*100);
     alldata->options.mistNetElevs[0] = 0.5;
     alldata->options.mistNetElevs[1] = 1.5;
     alldata->options.mistNetElevs[2] = 2.5;
@@ -188,6 +190,7 @@ public:
   Vol2BirdConfig(const Vol2BirdConfig& other) {
     initialize_config(&_alldata);
     strcpy(_alldata.misc.filename_pvol, other._alldata.misc.filename_pvol);
+    strcpy(_alldata.misc.filename_vp, other._alldata.misc.filename_vp);
     _alldata.options.elevMin = other._alldata.options.elevMin;
     _alldata.options.elevMax = other._alldata.options.elevMax;
     strcpy(_alldata.options.dbzType, other._alldata.options.dbzType);
@@ -233,6 +236,7 @@ public:
     _alldata.options.resampleNbins = other._alldata.options.resampleNbins;
     _alldata.options.resampleNrays = other._alldata.options.resampleNrays;
     _alldata.options.mistNetNElevs = other._alldata.options.mistNetNElevs;
+    memcpy(_alldata.options.mistNetElevs, other._alldata.options.mistNetElevs, sizeof(float)*100);
     _alldata.options.mistNetElevs[0] = other._alldata.options.mistNetElevs[0];
     _alldata.options.mistNetElevs[1] = other._alldata.options.mistNetElevs[1];
     _alldata.options.mistNetElevs[2] = other._alldata.options.mistNetElevs[2];
@@ -765,7 +769,6 @@ public:
     PolarVolume_t *volume = NULL;
     PolarVolume result;
     char *fileIn[INPUTFILESMAX];
-    int initSuccessful = 0;
 
     if (files.size() == 0) {
       throw std::invalid_argument("Must specify at least one input filename");
@@ -801,6 +804,9 @@ public:
     if (volume == NULL) {
       throw std::runtime_error("Could not read file(s)");
     }
+    
+    // copy input filename to misc.filename_pvol
+    strcpy(config.alldata()->misc.filename_pvol, fileIn[0]);
 
     config.alldata()->misc.loadConfigSuccessful = TRUE; // Config is already loaded when we come here.
 
@@ -902,7 +908,15 @@ public:
     mapDataToRave(volume, config.alldata());
 
     if (!vpOutName.empty()) {
-      int result = saveToODIM((RaveCoreObject*) config.alldata()->vp, vpOutName.c_str());
+
+      int result;
+
+      if (isCSV(vpOutName.c_str())) {
+          result = saveToCSV(vpOutName.c_str(), config.alldata(), volume);
+      } else {
+          result = saveToODIM((RaveCoreObject*)config.alldata()->vp, vpOutName.c_str());
+      }
+      
       if (result == FALSE) {
         RAVE_OBJECT_RELEASE(volume);
         throw std::runtime_error(std::string("Can not write : ") + vpOutName);

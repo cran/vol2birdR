@@ -89,12 +89,21 @@ cpp_vol2bird_get_wsr88d_site_location <- function() {
 #'
 #' @keywords internal
 #' @param path The shared library
+cpp_vol2bird_version <- function() {
+    .Call(`_vol2birdR_cpp_vol2bird_version`)
+}
+
+#' Initializes the mistnet shared library pointed to by the path
+#'
+#' @keywords internal
+#' @param path The shared library
 cpp_mistnet_init <- function(path) {
     invisible(.Call(`_vol2birdR_cpp_mistnet_init`, path))
 }
 
 #' The software has to be compiled with -DRAVE_MEMORY_DEBUG and without -DNO_RAVE_PRINTF.
 #' Manual handling for now.
+#' @keywords internal
 cpp_printMemory <- function() {
     invisible(.Call(`_vol2birdR_cpp_printMemory`))
 }

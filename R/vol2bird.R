@@ -13,11 +13,13 @@
 #'   the [HDF5](https://support.hdfgroup.org/HDF5/) format, 2) NEXRAD format
 #'   supported by the ['RSL'
 #'   library](https://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/) or 3) Vaisala
-#'   IRIS (IRIS RAW) format.
+#'   IRIS (IRIS RAW) format. IRIS format is not available on CRAN, see
+#'   vol2birdR development version on Github.
 #' @param config optional configuration object of class `Rcpp_Vol2BirdConfig`,
 #' typically output from \link{vol2bird_config}
-#' @param vpfile Character. File name. When provided, writes a vertical profile
-#'   file (`vpfile`) in the ODIM HDF5 format to disk.
+#' @param vpfile Character. File name. When provided with .csv extension, writes a vertical profile
+#' time series (vpts) in the [standard CSV format](https://aloftdata.eu/vpts-csv/). Proivded with another or no exentsion,
+#'  writes a vertical profile vertical profile file (`vpfile`) in the ODIM HDF5 format to disk.
 #' @param pvolfile_out Character. File name. When provided, writes a polar
 #'   volume (`pvol`) file in the ODIM HDF5 format to disk. Useful for converting
 #'   'RSL' formats to ODIM, and for adding 'MistNet' segmentation output.

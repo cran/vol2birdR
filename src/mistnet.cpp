@@ -2,6 +2,7 @@
 #include <memory>
 #include <librave.h>
 #include <libmistnet/mistnet.h>
+#include <libvol2bird/constants.h>
 
 //  #include <thread>
 
@@ -62,13 +63,18 @@ void RSL_Rprintf(const char* msg) {
   Rprintf("%s", msg);
 }
 
+#ifdef ENABLE_IRIS2ODIM
 void IRIS2ODIM_Rprintf(const char* msg) {
   Rprintf("%s", msg);
 }
+#endif
 
 extern "C" {
 void RSL_set_printfun(void(*printfun)(const char*));
+
+#ifdef ENABLE_IRIS2ODIM
 void Iris_set_printf(void(*printfun)(const char*));
+#endif
 }
 
 //' Initializes the vol2birdR library
@@ -80,7 +86,9 @@ void cpp_vol2bird_initialize() {
   HL_init();
   vol2bird_set_printf(Vol2Bird_Rprintf);
   vol2bird_set_err_printf(Vol2Bird_Rprintf);
+#ifdef ENABLE_IRIS2ODIM  
   Iris_set_printf(IRIS2ODIM_Rprintf);
+#endif  
   RSL_set_printfun(RSL_Rprintf);
 }
 
@@ -109,6 +117,15 @@ std::string cpp_vol2bird_get_wsr88d_site_location()
   return std::string(wsr88d_get_site_info_file());
 }
 
+//' Initializes the mistnet shared library pointed to by the path
+//'
+//' @keywords internal
+//' @param path The shared library
+// [[Rcpp::export]]
+std::string cpp_vol2bird_version() {
+  return VERSION;
+}
+
 
 void call_r_gc() {
   Rcpp::Function r_gc("gc");
@@ -134,6 +151,7 @@ void rave_alloc_print_statistics(void);
 
 //' The software has to be compiled with -DRAVE_MEMORY_DEBUG and without -DNO_RAVE_PRINTF.
 //' Manual handling for now.
+//' @keywords internal
 // [[Rcpp::export]]
 void cpp_printMemory() {
   RaveCoreObject_printStatistics();

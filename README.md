@@ -5,6 +5,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/vol2birdR)](https://cran.r-project.org/package=vol2birdR)
 [![R-CMD-check](https://github.com/adokter/vol2birdR/workflows/R-CMD-check/badge.svg)](https://github.com/adokter/vol2birdR/actions)
+
 <!-- badges: end -->
 
 # vol2birdR
@@ -66,11 +67,11 @@ Homebrew.
 
 </details>
 
-| System                                      | Command                                                           |
-|:--------------------------------------------|:------------------------------------------------------------------|
-| **OS X (using Homebrew)**                   | `brew install hdf5 proj gsl`                                      |
-| **Debian-based systems (including Ubuntu)** | `sudo apt-get install libhdf5-dev libproj-dev gsl-bin libgsl-dev` |
-| **Systems supporting yum and RPMs**         | `sudo yum install hdf5-devel proj-devel gsl gsl-devel`            |
+| System                                      | Command                                                                      |
+|:--------------------------------------------|:-----------------------------------------------------------------------------|
+| **OS X (using Homebrew)**                   | `brew install hdf5 proj gsl pkg-config`                                      |
+| **Debian-based systems (including Ubuntu)** | `sudo apt-get install libhdf5-dev libproj-dev gsl-bin libgsl-dev pkg-config` |
+| **Systems supporting yum and RPMs**         | `sudo yum install hdf5-devel proj-devel gsl gsl-devel pkgconfig`             |
 
 Next, you can install the released version of ‘vol2birdR’ from
 [CRAN](https://CRAN.R-project.org) with:
@@ -92,6 +93,31 @@ Then load the package with:
 ``` r
 library(vol2birdR)
 ```
+
+### MistNet installation
+
+MistNet is a deep convolution neural net for segmenting out
+precipitation from radar data, see Lin et al. 2019. To use MistNet,
+follow the following additional installation steps in R:
+
+    # STEP 1: install additional libraries for using MistNet:
+    library(vol2birdR)
+    install_mistnet()
+
+After completing this step, the following command should evaluate to
+`TRUE`:
+
+    mistnet_exists()
+
+Next, download the mistnet model. Note that the model file is large,
+over 500Mb.
+
+    # STEP 2: download mistnet model:
+    install_mistnet_model()
+
+See
+[vignette](https://adriaandokter.com/vol2birdR/articles/vol2birdR.html)
+for additional installation information
 
 ## References:
 
