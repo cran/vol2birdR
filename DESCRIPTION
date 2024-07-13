@@ -1,15 +1,15 @@
 Package: vol2birdR
 Type: Package
 Title: Vertical Profiles of Biological Signals in Weather Radar Data
-Version: 1.0.2
-Date: 2024-01-04
+Version: 1.0.3
+Date: 2024-07-10
 Authors@R: c(
     person("Anders", "Henja", , "anders.henja@gmail.com", role = "aut",
            comment = "vol2birdR package author and author of RAVE and HLHDF libraries"),
-    person("Adriaan M.", "Dokter", , "at744@cornell.edu", role = c("ctb"),
+    person("Adriaan M.", "Dokter", , "vol2birdr@cornell.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6573-066X")),
-    person("Alexander", "Tedeschi", , "at744@cornell.edu", role = c("aut", "cre"),
-           comment = "contributor to vol2bird library"),
+    person("Alexander", "Tedeschi", , "at744@cornell.edu", role = "ctb",
+           comment =  c(ORCID = "0000-0003-0772-6931")),
     person("Tsung-Yu", "Lin", role = "ctb",
            comment = "contributor MistNet segmentation model"),
     person("Subranshu", "Maji", , "smaji@cs.umass.edu", role = "ctb",
@@ -50,7 +50,7 @@ BugReports: https://github.com/adokter/vol2birdR/issues
 Imports: assertthat, methods, pkgbuild, Rcpp (>= 1.0.4), rlang, utils,
         withr
 LinkingTo: Rcpp, RcppGSL
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 SystemRequirements: GNU make, GSL, HDF5, PROJ
 NeedsCompilation: yes
@@ -59,11 +59,11 @@ Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Copyright: file COPYRIGHTS
 Encoding: UTF-8
-Packaged: 2024-01-16 22:30:34 UTC; at744
+Packaged: 2024-07-10 20:45:07 UTC; at744
 Author: Anders Henja [aut] (vol2birdR package author and author of RAVE and
     HLHDF libraries),
-  Adriaan M. Dokter [ctb] (<https://orcid.org/0000-0001-6573-066X>),
-  Alexander Tedeschi [aut, cre] (contributor to vol2bird library),
+  Adriaan M. Dokter [aut, cre] (<https://orcid.org/0000-0001-6573-066X>),
+  Alexander Tedeschi [ctb] (<https://orcid.org/0000-0003-0772-6931>),
   Tsung-Yu Lin [ctb] (contributor MistNet segmentation model),
   Subranshu Maji [ctb] (contributor MistNet segmentation model),
   Daniel Sheldon [ctb] (contributor MistNet segmentation model),
@@ -80,6 +80,6 @@ Author: Anders Henja [aut] (vol2birdR package author and author of RAVE and
   Swedish Meteorological and Hydrological Institute, SMHI [cph]
     (copyright holder of HLHDF and RAVE libraries),
   GloBAM [fnd] (https://globam.science)
-Maintainer: Alexander Tedeschi <at744@cornell.edu>
+Maintainer: Adriaan M. Dokter <vol2birdr@cornell.edu>
 Repository: CRAN
-Date/Publication: 2024-01-19 22:30:03 UTC
+Date/Publication: 2024-07-13 12:30:02 UTC
