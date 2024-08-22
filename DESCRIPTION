@@ -1,8 +1,8 @@
 Package: vol2birdR
 Type: Package
 Title: Vertical Profiles of Biological Signals in Weather Radar Data
-Version: 1.0.3
-Date: 2024-07-10
+Version: 1.0.4
+Date: 2024-08-21
 Authors@R: c(
     person("Anders", "Henja", , "anders.henja@gmail.com", role = "aut",
            comment = "vol2birdR package author and author of RAVE and HLHDF libraries"),
@@ -59,7 +59,7 @@ Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Copyright: file COPYRIGHTS
 Encoding: UTF-8
-Packaged: 2024-07-10 20:45:07 UTC; at744
+Packaged: 2024-08-21 17:27:16 UTC; amd427
 Author: Anders Henja [aut] (vol2birdR package author and author of RAVE and
     HLHDF libraries),
   Adriaan M. Dokter [aut, cre] (<https://orcid.org/0000-0001-6573-066X>),
@@ -82,4 +82,4 @@ Author: Anders Henja [aut] (vol2birdR package author and author of RAVE and
   GloBAM [fnd] (https://globam.science)
 Maintainer: Adriaan M. Dokter <vol2birdr@cornell.edu>
 Repository: CRAN
-Date/Publication: 2024-07-13 12:30:02 UTC
+Date/Publication: 2024-08-22 05:10:02 UTC
