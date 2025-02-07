@@ -1,8 +1,14 @@
+# vol2birdR 1.0.6
+* Fix warning message `pj_obj_create: Cannot find proj.db` (#50)
+* Added an automatic mistnet library build for M1 macs (#82)
+
 # vol2birdR 1.0.5
-* Fixed broken hdf5 info link
-* Suppressed warnings associated with Rtools43 for Windows builds
-* Added overflow check for nCells
-* Explicitly specified C++17 standard in package's source files
+Addresses several build warning messages as required by CRAN
+
+* Fixed broken hdf5 info link (c628cae)
+* Suppressed warnings associated with Rtools43 for Windows builds (aee7ca9)
+* Added overflow check for nCells (e6bd1bd)
+* Explicitly specified C++17 standard in Windows build (aee7ca9)
 
 # vol2birdR 1.0.4
 * Reduced loading messages for mistnet (#72)
