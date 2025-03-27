@@ -1,8 +1,8 @@
-356f5e1517c8043ac067447ddbb13373 *DESCRIPTION
-8d3cd4df97c61ee20416958595080710 *NAMESPACE
-27810b61e096823b9d657079098605a2 *NEWS.md
+d4a1c41cf2413a35e06eff0c4268c639 *DESCRIPTION
+923173c684ba5a87bfd37cb881595d06 *NAMESPACE
+58c1f1c50ebc4c88dc7ea0bb78707072 *NEWS.md
 ae82b4b0d7b7efdd94108c5a25106387 *R/RcppExports.R
-5d75671579d6b43df4d541fc0934f9af *R/install.R
+e5dfd38bb4dd5da65d51606d1783af0e *R/install.R
 c47e1875efbf3101c6988b54705eb29d *R/load_volume.R
 aae16434bbdf3dc4d8b89f8ef0ada63c *R/mistnet_load.R
 1e7664e7bcef3a6bbf9b4dcc58201f23 *R/nexrad_station_file.R
@@ -13,7 +13,7 @@ ed5dcdb4e23ade83490349ab7de4aeb7 *R/vol2bird.R
 0f58963630db7c376bc18f2e81ad0b10 *R/vol2bird_config.R
 ec1277176e72a70b0fc698b9b77748ac *R/vol2bird_version.R
 58a099426e97853b613f92f865e452d8 *R/zzz.R
-618f7bdcb8ea637c3b3194aac2f394fe *README.md
+769ae91036a5a9eedd83ca7c77d87876 *README.md
 76161b65639451c966be75488458b3c3 *build/partial.rdb
 46399a38dcce402d833bf494c35ce4a3 *build/vignette.rds
 e025cdfff8a1e7bd18c92c96c811ffd1 *cleanup
@@ -48,9 +48,10 @@ ec16667f444f8ce3ff55e82368e46208 *man/install_os.Rd
 54fa432ba6aaac2bc00423d2e3bfa771 *man/lib_installed.Rd
 f196b9bd5a074c06a6f7cef4417cb2aa *man/load_volume.Rd
 068b1d28e274645bb52997b890635769 *man/mistnet_default.Rd
-012f9d0e87c2c67ab1e19e9fd88c66e9 *man/mistnet_exists.Rd
+a7bb60807db86814bafb016b7410aaf8 *man/mistnet_exists.Rd
 e79ba68b0c582981e5a35400b74c3f11 *man/mistnet_install_lib.Rd
 ec63b999e9fe4bbc45115263713d0bd7 *man/mistnet_install_libs.Rd
+be37a1010e1c873b3b854c7baeaa17d8 *man/mistnet_installed.Rd
 cc871d2a8d98c3687c4d5937f403afd8 *man/mistnet_start.Rd
 77381bd80da7452eb167cd9ebb596267 *man/nexrad_station_file.Rd
 c76f611655e3b3a4ee5857b866108b38 *man/rsl2odim.Rd
@@ -210,7 +211,7 @@ e17412be82d0075a6d0f4d1b7c014fc8 *src/librsl/endian.c
 47c1401ff2a4209d5b130415d440e6a3 *src/librsl/radar.c
 be7f102e807735da431425e1ed0b4e52 *src/librsl/rainbow.c
 513e70952234df06992cb8535f8a9915 *src/librsl/rainbow_to_radar.c
-23396c598a2503d023b51131ed1d3627 *src/librsl/range.c
+3aad1c2f9405ac36b6cd244d6ed7fe09 *src/librsl/range.c
 dc0f332e8e6640a0c048b109f9d710d8 *src/librsl/ray_indexes.c
 25685953d8a44a2ea2401d85524bcf3e *src/librsl/sort_rays.c
 f98c0f3fed9a7bb421f9a143873be19e *src/librsl/uf_to_radar.c
@@ -223,9 +224,9 @@ bb3e4e65ada629c9b3512d816382ac9b *src/librsl/wsr88d_merge_split_cuts.c
 ed56aa75093764d347a57efb692dc5f2 *src/librsl/wsr88d_to_radar.c
 63b4ef5da861d6e7f9f892ef30d2ef07 *src/libvol2bird/libdealias.c
 d03d02aaed8954de88d1fce05cde3b02 *src/libvol2bird/librender.c
-8c7f6424852353d9eab319de69724bde *src/libvol2bird/librsl.c
+4670fef45ef43f9cbf4ece9f5cadfe20 *src/libvol2bird/librsl.c
 fb8316d8e43bd6d527d4e32021591bd7 *src/libvol2bird/libsvdfit.c
-6fde74035bdca724041efef1a636826f *src/libvol2bird/libvol2bird.c
+46d9626067da86ecaf264cff3354ffe7 *src/libvol2bird/libvol2bird.c
 3ca607074d8f8f896710a88f2079b7bd *src/mistnet.cpp
 95ec894766473a9e48a2e60ee37e67c0 *src/vol2birdR_types.h
 faedf98f39238da87ea00c91a4e79b63 *tests/testthat.R
