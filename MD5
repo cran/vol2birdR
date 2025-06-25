@@ -1,6 +1,6 @@
-51bb8f486de0908bdc463bb598906b88 *DESCRIPTION
+3e1cce1c70475faa229089a503cf1b72 *DESCRIPTION
 923173c684ba5a87bfd37cb881595d06 *NAMESPACE
-459900e5e3cf02ae9200fcc45fb51719 *NEWS.md
+b23aba7c3df9078d72cd4529c6fc1530 *NEWS.md
 ae82b4b0d7b7efdd94108c5a25106387 *R/RcppExports.R
 e5dfd38bb4dd5da65d51606d1783af0e *R/install.R
 c47e1875efbf3101c6988b54705eb29d *R/load_volume.R
@@ -226,7 +226,7 @@ ed56aa75093764d347a57efb692dc5f2 *src/librsl/wsr88d_to_radar.c
 bcf4d1379a7f3c053806da2a5655bfcd *src/libvol2bird/librender.c
 8d6c539fd013df6e425f44f3837156d9 *src/libvol2bird/librsl.c
 fb8316d8e43bd6d527d4e32021591bd7 *src/libvol2bird/libsvdfit.c
-46d9626067da86ecaf264cff3354ffe7 *src/libvol2bird/libvol2bird.c
+c81ca5f310f354703234d5a429047637 *src/libvol2bird/libvol2bird.c
 7692db34d3fe8851c38bf358aca28131 *src/mistnet.cpp
 95ec894766473a9e48a2e60ee37e67c0 *src/vol2birdR_types.h
 faedf98f39238da87ea00c91a4e79b63 *tests/testthat.R
