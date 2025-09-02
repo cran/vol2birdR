@@ -1,13 +1,13 @@
-f9023b76b0fb1b2af28998d9e7a76572 *DESCRIPTION
+7b4d2cc104194a83e0af5c90bb84d17d *DESCRIPTION
 923173c684ba5a87bfd37cb881595d06 *NAMESPACE
-f150f53827f6d13c9963225e918e4512 *NEWS.md
+659f95b20792306e07a72f867fa6785c *NEWS.md
 ae82b4b0d7b7efdd94108c5a25106387 *R/RcppExports.R
 e5dfd38bb4dd5da65d51606d1783af0e *R/install.R
 c47e1875efbf3101c6988b54705eb29d *R/load_volume.R
 aae16434bbdf3dc4d8b89f8ef0ada63c *R/mistnet_load.R
 1e7664e7bcef3a6bbf9b4dcc58201f23 *R/nexrad_station_file.R
 9401521a0d196dc99548c10c9b60b11d *R/package.R
-4f060b94fcf116382421d12fee62e490 *R/rsl2odim.R
+a7a8ac2dea6c44f2643793eb9d1a92b4 *R/rsl2odim.R
 5ec75fbc9c73b0f55934fd98922cb9ca *R/vol2bird.R
 7548fdfd21eafda44864ae2e32cbf0a0 *R/vol2birdR.R
 0f58963630db7c376bc18f2e81ad0b10 *R/vol2bird_config.R
@@ -54,7 +54,7 @@ ec63b999e9fe4bbc45115263713d0bd7 *man/mistnet_install_libs.Rd
 be37a1010e1c873b3b854c7baeaa17d8 *man/mistnet_installed.Rd
 cc871d2a8d98c3687c4d5937f403afd8 *man/mistnet_start.Rd
 77381bd80da7452eb167cd9ebb596267 *man/nexrad_station_file.Rd
-c76f611655e3b3a4ee5857b866108b38 *man/rsl2odim.Rd
+dd8f809b898a784c4837ebf64ead2e8f *man/rsl2odim.Rd
 4ab95b594d4b81e3c92cb4397777facc *man/skip_if_no_temp_access.Rd
 71117b0e7e2ea54e1930abe9c143f604 *man/torch_install_path.Rd
 f42b1764d244a4d8b69ce6c7389794fc *man/vol2bird.Rd
